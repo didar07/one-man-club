@@ -1,0 +1,15 @@
+.exercise {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.exercise h1 {
+    text-align: center;
+    color: blue;
+    font-weight: 500;
+    margin-top: 50px;
+}
+
+.exercise h2 {
+    text-align: center;
+}
