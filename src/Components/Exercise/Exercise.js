@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Break from '../Break/Break';
 import Cart from '../Cart/Cart';
 import './Exercise.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const Exercise = () => {
 
@@ -16,6 +18,10 @@ const Exercise = () => {
     const handleAddToList = (cart) => {
         const newList = [...list, cart]
         setList(newList)
+    }
+    let time = 0
+    for (const cart of list) {
+        time = time + cart.time
     }
 
     return (
@@ -40,9 +46,11 @@ const Exercise = () => {
                     <h2>Didarul Alam</h2>
                     <p>Sydney, Australia</p>
                 </div>
-                <p>{list.length}</p>
-                <Break></Break>
 
+                <Break></Break>
+                <div>
+                    <p>Exercise Detail: {time}s</p>
+                </div>
             </div>
         </div>
     );
