@@ -54,3 +54,9 @@
     border-radius: 20px;
     background-color: blueviolet;
 }
+
+@media screen and (max-width: 1110px) {
+    .main-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
