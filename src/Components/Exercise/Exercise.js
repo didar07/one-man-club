@@ -4,6 +4,7 @@ import Cart from '../Cart/Cart';
 import './Exercise.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import Swal from 'sweetalert2'
 
 const Exercise = () => {
 
@@ -19,6 +20,16 @@ const Exercise = () => {
         const newList = [...list, cart]
         setList(newList)
     }
+
+    const handleActivity = () => {
+        Swal.fire(
+            'Good job!',
+            'Your  Activity is Completed!',
+            'success'
+        )
+    }
+
+
     let time = 0
     for (const cart of list) {
         time = time + cart.time
@@ -54,7 +65,7 @@ const Exercise = () => {
                     <h2>Break Time:</h2>
                 </div>
                 <div className='activity-btn'>
-                    <button>Activity Completed</button>
+                    <button onClick={handleActivity}>Activity Completed</button>
                 </div>
             </div>
         </div>
