@@ -13,3 +13,12 @@
 .exercise h2 {
     text-align: center;
 }
+
+.cart-container {
+    background-color: lightgrey;
+}
+
+.cart-info {
+    text-align: center;
+
+}

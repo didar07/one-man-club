@@ -1,0 +1,41 @@
+.weight-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.weight-details {
+    line-height: 50%;
+}
+
+.height-details {
+    line-height: 50%;
+}
+
+.years-details {
+    line-height: 50%;
+}
+
+.weight-container p {
+    text-align: center;
+}
+
+.breake-time-container {
+    margin-top: 20px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: aliceblue;
+    padding: 30px;
+    border-radius: 50px;
+}
+
+.btn-time {
+    background-color: bisque;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+}
