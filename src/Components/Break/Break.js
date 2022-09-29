@@ -1,8 +1,6 @@
 
 import './Break.css'
 const Break = ({ handleBreake }) => {
-
-
     return (
         <div>
             <div className='weight-container'>

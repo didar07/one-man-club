@@ -2,24 +2,37 @@ import React, { useEffect, useState } from 'react';
 import Break from '../Break/Break';
 import Cart from '../Cart/Cart';
 import './Exercise.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import Swal from 'sweetalert2'
+import { AddToDb } from '../fakedb';
 
 const Exercise = () => {
 
     const [carts, setCarts] = useState([])
     const [list, setList] = useState([])
+
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setCarts(data))
     }, [])
 
+
+
+
     const handleAddToList = (cart) => {
         const newList = [...list, cart]
         setList(newList)
     }
+
+    useEffect(() => {
+        let breake;
+        let stored = localStorage.getItem('breake time')
+        if (stored) {
+            breake = JSON.parse(stored)
+        }
+        setBreake(breake)
+    }, [])
+
 
     const handleActivity = () => {
         Swal.fire(
@@ -31,11 +44,11 @@ const Exercise = () => {
 
 
     const [breake, setBreake] = useState(0)
-
     const handleBreake = (newBreake) => {
         setBreake(newBreake)
-
+        AddToDb(newBreake)
     }
+
 
     let time = 0
     for (const cart of list) {
