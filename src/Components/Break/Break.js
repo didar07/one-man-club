@@ -1,10 +1,7 @@
-import React from 'react';
+
 import './Break.css'
-const Break = () => {
+const Break = ({ handleBreake }) => {
 
-    const handleBreakTime = () => {
-
-    }
 
     return (
         <div>
@@ -23,10 +20,10 @@ const Break = () => {
                 </div>
             </div>
             <div className='breake-time-container'>
-                <button className='btn-time'>10s</button>
-                <button className='btn-time'>20s</button>
-                <button className='btn-time'>30s</button>
-                <button className='btn-time'>40s</button>
+                <button onClick={() => handleBreake(10)} className='btn-time'>10s</button>
+                <button onClick={() => handleBreake(20)} className='btn-time'>20s</button>
+                <button onClick={() => handleBreake(30)} className='btn-time'>30s</button>
+                <button onClick={() => handleBreake(40)} className='btn-time'>40s</button>
             </div>
         </div>
     );

@@ -30,6 +30,13 @@ const Exercise = () => {
     }
 
 
+    const [breake, setBreake] = useState(0)
+
+    const handleBreake = (newBreake) => {
+        setBreake(newBreake)
+
+    }
+
     let time = 0
     for (const cart of list) {
         time = time + cart.time
@@ -47,6 +54,7 @@ const Exercise = () => {
                         key={cart.id}
                         cart={cart}
                         handleAddToList={handleAddToList}
+
                     ></Cart>)
                 }
 
@@ -55,14 +63,14 @@ const Exercise = () => {
 
                 <div className='cart-info'>
                     <h2>Didarul Alam</h2>
-                    <p>Sydney, Australia</p>
+                    <p>chittagong, Bangladesh</p>
                 </div>
 
-                <Break></Break>
+                <Break handleBreake={handleBreake}></Break>
                 <div className='exerecise-details'>
                     <h1>Exercise Detail</h1>
                     <h2>Exercise time: {time}s</h2>
-                    <h2>Break Time:</h2>
+                    <h2>Break Time: {breake}</h2>
                 </div>
                 <div className='activity-btn'>
                     <button onClick={handleActivity}>Activity Completed</button>
