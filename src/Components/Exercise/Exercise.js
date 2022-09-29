@@ -48,8 +48,10 @@ const Exercise = () => {
                 </div>
 
                 <Break></Break>
-                <div>
-                    <p>Exercise Detail: {time}s</p>
+                <div className='exerecise-details'>
+                    <h1>Exercise Detail</h1>
+                    <h2>Exercise time: {time}s</h2>
+                    <h2>Break Time:</h2>
                 </div>
             </div>
         </div>

@@ -2,6 +2,10 @@ import React from 'react';
 import './Break.css'
 const Break = () => {
 
+    const handleBreakTime = () => {
+
+    }
+
     return (
         <div>
             <div className='weight-container'>
