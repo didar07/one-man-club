@@ -37,3 +37,20 @@
     padding-right: 30px;
     border-radius: 40px;
 }
+
+.activity-btn {
+    text-align: center;
+    margin-top: 70px;
+
+}
+
+.activity-btn button {
+    color: white;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    justify-content: center;
+    border: none;
+    border-radius: 20px;
+    background-color: blueviolet;
+}

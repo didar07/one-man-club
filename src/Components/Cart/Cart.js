@@ -10,7 +10,7 @@ const Cart = (props) => {
             <div className='cart-details'>
                 <img src={picture} alt="" />
                 <h3>Title: {title}</h3>
-                <p>Age: {age}</p>
+                <p>For Age: {age}</p>
                 <p>Time Required:{time}s</p>
                 <button onClick={() => handleAddToList(cart)} className='list-btn'>Add to List</button>
             </div>
