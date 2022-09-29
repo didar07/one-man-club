@@ -12,14 +12,14 @@ const Exercise = () => {
             .then(data => setCarts(data))
     }, [])
 
-
     return (
         <div className='exercise'>
-            <div className='main-container'>
-                <h1>ONE-MAN-CLUB {carts?.length}</h1>
-                <h2>Select today’s exercis</h2>
-                {
 
+            <h1>ONE-MAN-CLUB </h1>
+            <h2>Select today’s exercis</h2>
+
+            <div className='main-container'>
+                {
                     carts?.map(cart => <Cart key={cart.id} cart={cart}></Cart>)
                 }
 

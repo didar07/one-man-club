@@ -1,0 +1,13 @@
+.cart-details {
+    margin-left: 20px;
+    background-color: antiquewhite;
+    bottom: 0;
+}
+
+.cart-details img {
+    width: 60%;
+    height: fit-content;
+    margin-left: 40px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
