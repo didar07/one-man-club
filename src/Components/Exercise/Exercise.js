@@ -6,11 +6,17 @@ import './Exercise.css'
 const Exercise = () => {
 
     const [carts, setCarts] = useState([])
+    const [list, setList] = useState([])
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setCarts(data))
     }, [])
+
+    const handleAddToList = (cart) => {
+        const newList = [...list, cart]
+        setList(newList)
+    }
 
     return (
         <div className='exercise'>
@@ -20,7 +26,11 @@ const Exercise = () => {
 
             <div className='main-container'>
                 {
-                    carts?.map(cart => <Cart key={cart.id} cart={cart}></Cart>)
+                    carts?.map(cart => <Cart
+                        key={cart.id}
+                        cart={cart}
+                        handleAddToList={handleAddToList}
+                    ></Cart>)
                 }
 
             </div>
@@ -30,6 +40,7 @@ const Exercise = () => {
                     <h2>Didarul Alam</h2>
                     <p>Sydney, Australia</p>
                 </div>
+                <p>{list.length}</p>
                 <Break></Break>
 
             </div>

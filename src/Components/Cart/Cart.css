@@ -1,7 +1,7 @@
 .cart-details {
     margin-left: 20px;
     background-color: antiquewhite;
-    bottom: 0;
+
 }
 
 .cart-details img {
@@ -10,4 +10,14 @@
     margin-left: 40px;
     margin-top: 10px;
     border-radius: 15px;
+}
+
+.list-btn {
+    height: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: skyblue
 }
